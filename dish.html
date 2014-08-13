@@ -1,0 +1,31 @@
+<html>
+<head><title></title></head>
+
+<body>
+
+ <p>Enjoy {{restaurant.name}}'s {{dish.name}}!</p>
+
+    <p>
+
+    <p>
+
+    {% for menu in restaurant.menus %}
+
+    <p><b>{{menu.name}}</b></p>
+    {% for category in menu.categories %}
+    - {{category.name}}: <br />
+    {% for dish in category.dishes %}
+    <a href="/dish?did={{dish.key()}}">{{dish.name}}</a> <br />
+    {% endfor %}
+    {% endfor %}
+
+    {% endfor %}
+
+    </p>
+</p>
+
+    
+
+
+</body>
+</html>
